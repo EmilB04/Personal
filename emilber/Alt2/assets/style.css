@@ -70,7 +70,7 @@ main{
 }
 #main-cover {
     background-image: url('/assets/media/main-photo.jpg');
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     background-size:cover;
     margin: 0 auto;
@@ -130,9 +130,9 @@ h2{
     border-radius: 20px;
     cursor: pointer;
     background-color: transparent;
-    padding: 1rem;
+    padding: 0.8rem;
 }
-#main-header-buttons button:hover{
+#main-header-buttons button:first-child{
     background-color: #202020;  
     color: white;
 }
@@ -146,16 +146,56 @@ h2{
     gap: 1rem;
     margin-top: 1rem;
 }
+.main-product-info {
+    justify-content: initial !important;
+    gap: 1rem;
+    font-weight: 600;
+}
+
+.main-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1 1 300px; /* Allow items to grow and shrink, with a minimum width */
+    max-width: 400px; /* Ensure cards don't grow larger than 300px */
+}
 
 .main-cards > article {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
 }
-.main-cards  img {
-    max-width: 500px;
-    min-width: 300px;
 
+.main-cards img {
+    max-width: 100%;
     width: 100%;
     border-radius: 20px;
+}
+.heart {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    color: white; 
+    font-size: 24px; 
+    cursor: pointer; 
+    background-color: #acacacb9;
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1508px) {
+    #grid-container {
+        margin-inline: 20rem;
+    }
+    
 }
