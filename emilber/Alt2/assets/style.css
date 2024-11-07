@@ -73,7 +73,7 @@ nav a {
 /* ---------- MAIN ---------- */
 #main-cover {
     background-image: url('/assets/media/main-photo.jpg');
-    height: calc(100vh + 1vh);
+    height: calc(50vh + 1vw);
     width: 100%;
     background-size:cover;
     margin: 0 auto;
