@@ -3,6 +3,9 @@ body{
     margin: 0 !important;
     padding: 0 !important;
 }
+#grid-container{
+    margin-inline: 0.5rem;
+}
 /* ---------- NAV ---------- */
 nav{
     display: flex;
@@ -65,9 +68,6 @@ nav a {
 }
 
 /* ---------- MAIN ---------- */
-main{
-    margin-inline: 0.5rem;
-}
 #main-cover {
     background-image: url('/assets/media/main-photo.jpg');
     height: 50vh;
@@ -112,7 +112,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    margin-top: 1rem;
+    margin-top: 3rem;
 }
 h2{
     font-size: 2.5rem;
@@ -157,8 +157,8 @@ h2{
     display: flex;
     flex-direction: column;
     width: 100%;
-    flex: 1 1 300px; /* Allow items to grow and shrink, with a minimum width */
-    max-width: 400px; /* Ensure cards don't grow larger than 300px */
+    flex: 1 1 300px;
+    max-width: 400px;
 }
 
 .main-cards > article {
@@ -183,10 +183,70 @@ h2{
     border-radius: 100%;
     padding: 0.5rem;
 }
+/* ------------- */
+#main-categories {
+    text-align: center;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+#main-categories article{
+    position: relative;
+}
+#main-categories img {
+    border-radius: 20px;
+    width: 100%;
+}
+#main-categories > h2, #main-categories > h3 {
+    flex-basis: 100%;
+}
+#main-categories h4 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: white;
+}
+#main-categories-img1>img, #main-categories-img2>img, #main-categories-img4>img, #main-categories-img5>img {
+    height: 30vh;
+}
+.blur-effect {
+    position: relative;
+    text-align: center;
+    filter: blur(2px);
+}
 
+/* ---------- */
+#main-reviews {
+    margin-top: 3rem;
+}
+#main-reviews h2 {
+    text-align: left;
+    margin-block: 1rem;
+}
+#main-reviews-scroller {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    width: 100%;
+}
 
-
-
+#main-reviews article {
+    background-color: #f0f0f0b9;
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 300px;
+    max-width: 10rem;
+    flex-shrink: 0;
+}
+#main-reviews img {
+    width: 100px;
+    border-radius: 100%;
+}
 
 
 
@@ -197,5 +257,4 @@ h2{
     #grid-container {
         margin-inline: 20rem;
     }
-    
 }
