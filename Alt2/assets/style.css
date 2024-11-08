@@ -207,6 +207,7 @@ h2{
 }
 #main-categories article{
     position: relative;
+    width: 100%;
 }
 #main-categories img {
     border-radius: 20px;
@@ -226,11 +227,10 @@ h2{
     color: white;
 }
 #main-categories-img1>img, #main-categories-img2>img, #main-categories-img4>img, #main-categories-img5>img {
-    height: 30vh;
+    max-height: 500px;
 }
 .blur-effect {
     position: relative;
-    text-align: center;
     filter: blur(2px);
 }
 
@@ -276,6 +276,10 @@ footer {
     justify-content: left;
     gap: 1.5rem;
     font-size: 1.5rem;
+    padding: 0;
+}
+#footer-socialmedia-icons li{
+    list-style-type: none;
 }
 #footer-flex-between{
     display: flex;
