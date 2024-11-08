@@ -73,7 +73,7 @@ nav a {
 /* ---------- MAIN ---------- */
 #main-cover {
     background-image: url('/assets/media/main-photo.jpg');
-    height: calc(50vh + 1vw);
+    height: calc(40rem + 1vh);
     width: 100%;
     background-size:cover;
     margin: 0 auto;
@@ -99,6 +99,10 @@ h1{
     font-size: 1rem;
     font-weight: 500;
     margin-block: 1rem;
+}
+#main-cover a {
+    text-decoration: none;
+    color: black;
 }
 #main-cover button{
     border: transparent;
@@ -139,6 +143,10 @@ h2{
     background-color: #202020;  
     color: white;
 }
+#main-header-buttons button:hover{
+    background-color: #202020;
+    color: white;
+}
 
 /* -------------- */
 #main-products {
@@ -161,7 +169,7 @@ h2{
     flex-direction: column;
     width: 100%;
     flex: 1 1 300px;
-    max-width: 400px;
+    max-width: 350px;
 }
 
 .main-cards > article {
@@ -185,6 +193,9 @@ h2{
     background-color: #acacacb9;
     border-radius: 100%;
     padding: 0.5rem;
+}
+.heart:hover {
+    background-color: #ff45b294;
 }
 /* ------------- */
 #main-categories {
