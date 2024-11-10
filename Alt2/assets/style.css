@@ -24,11 +24,11 @@ nav > ul{
 #nav-search{
     display: flex;
     border: 1px solid black;
-    border-radius: 0.7rem;
+    border-radius: 1rem;
 }
 #nav-search input{
     border: transparent;
-    border-radius: 0.7rem 0 0 0.7rem;
+    border-radius: 1rem 0 0 1rem;
     width: 100%;
     padding: 0.7rem;
 }
@@ -37,7 +37,7 @@ nav > ul{
 }
 #nav-search button{
     border: transparent;
-    border-radius: 0 0.7rem 0.7rem 0;
+    border-radius: 0 1rem 1rem 0;
     cursor: pointer;
     background-color: white;
     padding: 0.7rem;
@@ -68,6 +68,10 @@ nav a {
 }
 #nav-icons i {
     font-size: 1.5rem;
+}
+#nav-icons li:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
 }
 
 /* ---------- MAIN ---------- */
@@ -190,12 +194,13 @@ h2{
     color: white; 
     font-size: 24px; 
     cursor: pointer; 
-    background-color: #acacacb9;
+    backdrop-filter: blur(15px);
+    background-color: #0000002a;
     border-radius: 100%;
     padding: 0.5rem;
 }
 .heart:hover {
-    background-color: #ff45b294;
+    background-color: #fa002194;
 }
 /* ------------- */
 #main-categories {
@@ -231,7 +236,7 @@ h2{
 }
 .blur-effect {
     position: relative;
-    filter: blur(2px);
+    filter: opacity(67%) brightness(86%) blur(1px);
 }
 
 /* ---------- */
@@ -267,10 +272,48 @@ footer {
     margin-bottom: 3rem;
 }
 
+footer ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
 
 
-#footer-socialmedia-icons{
+
+#footer-flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+#flex-footer-list{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    gap: 1rem;
+}
+#footer-flex-between ul {
+    display: flex;
+    flex-direction: column;
+}
+footer aside {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+footer aside ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+footer aside ul li a {
+    text-decoration: none;
+    color: black;
+}
+#footer-social-media{
+    margin-top: 2rem;
+}
+#footer-social-media-icons{
     flex-basis: 100%;
     display: flex;
     justify-content: left;
@@ -278,13 +321,12 @@ footer {
     font-size: 1.5rem;
     padding: 0;
 }
-#footer-socialmedia-icons li{
+#footer-social-media-icons li{
     list-style-type: none;
 }
-#footer-flex-between{
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
+#footer-social-media-icons a{
+    text-decoration: none;
+    color: black;
 }
 
 
