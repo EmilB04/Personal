@@ -368,15 +368,11 @@ footer aside ul li a {
     align-self: baseline;
     margin-inline: 1rem;
 }
+#main-shopping-bag li {
+    margin-block: 0.2rem;
+}
 #main-shopping-bag img {
     width: 300px;
-}
-
-
-.main-shopping-options {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
 }
 
 #main-shopping-bag select {
@@ -399,6 +395,28 @@ footer aside ul li a {
     color: black;
 }
 
+#main-shopping-form {
+    display: flex;
+    flex-direction: column;;
+    margin-inline: 1rem;
+}
+#main-shopping-form input {
+    padding: 0.8rem;
+    border: 1px solid #d3d3d38f;
+    margin-block-end: 1rem;
+}
+#main-shopping-form button {
+    padding: 0.8rem;
+    border: transparent;
+    background-color: #414141;
+    color: white;
+    cursor: pointer;
+}
+#main-shopping-form button:last-child {
+    background-color: transparent;
+    margin-top: 1rem;
+    color: black;
+}
 
 
 

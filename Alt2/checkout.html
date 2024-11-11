@@ -40,45 +40,97 @@
             <h1>Kasse</h1>
             <section id="main-shopping-bag">
                 <h2>1. Shoppingbaggen din</h2>
-                <img src="https://picsum.photos/400" alt="#">
-                <article class="main-shopping-information">
-                    <ul>
-                        <li><strong>PRODUCT NAME</strong></li>
-                        <li class="product-price">Pris: 599 kr.</li>
-                        <li id="total-price">Totalpris: 599 kr.</li>
-                        <li>Farge: Beige</li>
-                    </ul>
-                    <ul class="main-shopping-options">
-                        <li>
-                            <label for="">
-                            Størrelse
-                                <select name="" id="">
-                                    <option value="XS">XS</option>
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                    <option value="XL">XL</option>
-                                </select>
-                            </label>
-                        </li>
-                        <li>
-                            <label for="quantity">Antall:</label>
-                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" onchange="updatePrice()">
-                        </li>
-                    </ul>
-                    <ul class="main-heart-trash">
-                        <a href="#"><li><i class="fas fa-heart"></i></li></a>
-                        <a href="#"><li><i class="fas fa-trash"></i></li></a>
-                    </ul>
-                </article>
+                <section class="main-shopping-item">
+                    <img src="https://picsum.photos/400" alt="#">
+                    <article class="main-shopping-information">
+                        <ul>
+                            <li><strong>PRODUCT NAME</strong></li>
+                            <li class="product-price">Pris: 599 kr.</li>
+                            <li id="total-price">Totalpris: 599 kr.</li>
+                            <li>Farge: Beige</li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <label for="size">
+                                Størrelse
+                                    <select name="size">
+                                        <option value="XS">XS</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="quantity">Antall:</label>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" onchange="updatePrice()">
+                            </li>
+                        </ul>
+                        <ul class="main-heart-trash">
+                            <a href="#"><li><i class="fas fa-heart"></i></li></a>
+                            <a href="#"><li><i class="fas fa-trash"></i></li></a>
+                        </ul>
+                    </article>
+                </section>
+                <section class="main-shopping-item">
+                    <img src="https://picsum.photos/400" alt="#">
+                    <article class="main-shopping-information">
+                        <ul>
+                            <li><strong>PRODUCT NAME</strong></li>
+                            <li class="product-price">Pris: 599 kr.</li>
+                            <li id="total-price">Totalpris: 599 kr.</li>
+                            <li>Farge: Beige</li>
+                        </ul>
+                        <ul class="main-shopping-options">
+                            <li>
+                                <label for="size">
+                                Størrelse
+                                    <select name="size">
+                                        <option value="XS">XS</option>
+                                        <option value="S">S</option>
+                                        <option value="M">M</option>
+                                        <option value="L">L</option>
+                                        <option value="XL">XL</option>
+                                    </select>
+                                </label>
+                            </li>
+                            <li>
+                                <label for="quantity">Antall:</label>
+                                <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" onchange="updatePrice()">
+                            </li>
+                        </ul>
+                        <ul class="main-heart-trash">
+                            <a href="#"><li><i class="fas fa-heart"></i></li></a>
+                            <a href="#"><li><i class="fas fa-trash"></i></li></a>
+                        </ul>
+                    </article>
+                </section>
             </section>
-
-
-
-
-
-
-            <h2>2. Personopplysninger</h2>
+            <section id="main-shopping-information">
+                <h2>2. DINE OPPLYSNINGER</h2>
+                <section id="main-shopping-form">
+                    <h3>Leveringsadresse</h3>
+                        <label for="name">Fornavn:</label>
+                        <input type="text" id="name" name="name" placeholder="Nora" required>
+                        <label for="name">Etternavn:</label>
+                        <input type="text" id="name" name="name" placeholder="Nordmann" required>
+                        <label for="address">Adresse:</label>
+                        <input type="text" id="address" name="address" placeholder="B R A Veien 8B" required>
+                        <label for="postal">Postnummer:</label>
+                        <input type="text" id="postal" name="postal" placeholder="1785" required>
+                        <label for="city">By:</label>
+                        <input type="text" id="city" name="city" placeholder="Halden" required>
+                    <h3>Kontaktinformasjon</h3>
+                        <label for="contact-name">E-post:</label>
+                        <input type="text" id="contact-name" name="contact-name" placeholder="Noranordmann@hiof.no" required>
+                        <label for="contact-email">Telefon:</label>
+                        <input type="tel" id="contact-email" name="contact-email" placeholder="+4798***601" required>
+                    
+                    <button>Lagre</button>
+                    <button>Avbryt</button>
+                </section>
+            </section>
         </main>
     </div>
 </body>
