@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="grid-container">
+        <header>
+            <nav>
+                <ul id="nav-search">
+                    <input type="search" name="search" id="search" placeholder="Søk her">
+                    <button type="submit"><i class="fas fa-search"></i></button>
+                </ul>
+                <ul id="nav-elements">
+                    <li><a href="#">Hjem</a></li>
+                    <li><a href="products.html">Produkter</a></li>
+                    <span id="logo-text">Logo</span>
+                    <li><a href="#">Kategorier</a></li>
+                    <li><a href="#">Kontakt oss</a></li>
+                </ul>
+                <ul id="nav-icons">
+                    <li><a href="#"><i class="fas fa-user"></i></a></i></li>
+                    <li><a href="#"><i class="fas fa-heart"></i></a></i></li>
+                    <li><a href="checkout.html"><i class="fas fa-shopping-cart"></i></a></i></li>
+                </ul>
+            </nav>
+            <nav id="breadcrumb" aria-label="breadcrumb">
+                <!-- back arrow and text saying back to index -->
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i> Fortsett å handle
+                </a>
+            </nav>
+        </header>
+        <br>
+        <main id="main-checkout">
+            <h1>Kasse</h1>
+            <section id="main-shopping-bag">
+                <h2>1. Shoppingbaggen din</h2>
+                <img src="https://picsum.photos/400" alt="#">
+                <article class="main-shopping-information">
+                    <ul>
+                        <li><strong>PRODUCT NAME</strong></li>
+                        <li class="product-price">Pris: 599 kr.</li>
+                        <li id="total-price">Totalpris: 599 kr.</li>
+                        <li>Farge: Beige</li>
+                    </ul>
+                    <ul class="main-shopping-options">
+                        <li>
+                            <label for="">
+                            Størrelse
+                                <select name="" id="">
+                                    <option value="XS">XS</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                </select>
+                            </label>
+                        </li>
+                        <li>
+                            <label for="quantity">Antall:</label>
+                            <input type="number" id="quantity" name="quantity" value="1" min="1" max="100" onchange="updatePrice()">
+                        </li>
+                    </ul>
+                    <ul class="main-heart-trash">
+                        <a href="#"><li><i class="fas fa-heart"></i></li></a>
+                        <a href="#"><li><i class="fas fa-trash"></i></li></a>
+                    </ul>
+                </article>
+            </section>
+
+
+
+
+
+
+            <h2>2. Personopplysninger</h2>
+        </main>
+    </div>
+</body>
+
+<script>
+    function updatePrice() {
+        const pricePerItem = document.querySelector('.product-price').innerText.split(' ')[1];
+        const quantity = document.getElementById('quantity').value;
+        const totalPrice = pricePerItem * quantity;
+        document.getElementById('total-price').innerText = `Totalpris: ${totalPrice} kr.`;
+    }
+</script>
+</html>
