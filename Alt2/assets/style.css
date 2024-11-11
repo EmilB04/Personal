@@ -395,7 +395,7 @@ footer aside ul li a {
     color: black;
 }
 
-#main-shopping-form {
+#main-shopping-form article {
     display: flex;
     flex-direction: column;;
     margin-inline: 1rem;
