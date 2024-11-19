@@ -49,7 +49,7 @@
                             <li id="total-price">Totalpris: 599 kr.</li>
                             <li>Farge: Beige</li>
                         </ul>
-                        <ul>
+                        <ul class="main-size-quantity">
                             <li>
                                 <label for="size">
                                 Størrelse
@@ -82,7 +82,7 @@
                             <li id="total-price">Totalpris: 599 kr.</li>
                             <li>Farge: Beige</li>
                         </ul>
-                        <ul class="main-shopping-options">
+                        <ul class="main-size-quantity">
                             <li>
                                 <label for="size">
                                 Størrelse
@@ -119,7 +119,7 @@
                         <label for="address">Adresse:</label>
                         <input type="text" id="address" name="address" placeholder="B R A Veien 8B" required>
                         <label for="postal">Postnummer:</label>
-                        <input type="number" id="postal" name="postal" placeholder="1785" required>
+                        <input type="number" id="postal" name="postal" placeholder="1785" required min="1" max="9999">
                         <label for="city">By:</label>
                         <input type="text" id="city" name="city" placeholder="Halden" required>
                     </article>
@@ -129,14 +129,19 @@
                         <input type="text" id="contact-name" name="contact-name" placeholder="Noranordmann@hiof.no" required>
                         <label for="contact-email">Telefon:</label>
                         <input type="tel" id="contact-email" name="contact-email" placeholder="+4798***601" required>
-                        <button>Lagre</button>
+                        <button type="submit" value="submit" >Lagre</button>
                         <button>Avbryt</button>
                     </article>
                 </section>
             </section>
-        </main>
+        </main >
     </div>
 </body>
+<style>
+    main {
+        margin-bottom: 10rem;
+    }
+</style>
 
 <script>
     function updatePrice() {
