@@ -148,14 +148,24 @@ h2{
     background-color: transparent;
     padding: 0.8rem;
 }
-#main-header-buttons button:first-child{
-    background-color: #202020;  
-    color: white;
-}
-#main-header-buttons button:hover{
+#main-header-buttons button:first-child {
     background-color: #202020;
-    color: white;
 }
+#main-header-buttons button:first-child>a {
+    color : white;
+    text-decoration: none;
+}
+#main-header-buttons button a {
+    text-decoration: none;
+    color: black;
+}
+#main-header-buttons button:hover {
+    background-color: #202020;
+}
+#main-header-buttons button:hover>a {
+    color : white;
+}
+
 
 /* -------------- */
 #main-products {
