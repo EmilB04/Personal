@@ -26,7 +26,7 @@
         </article>
         <article>
           <q-img style="width: 375px; height: 375px;">
-            <img :src="emilBerglund" style="width: 100%;">
+            <img :src="EmilBerglund" style="width: 100%;">
           </q-img>
         </article>
       </section>
@@ -66,14 +66,14 @@
       <section id="social" class="full-screen social-section">
         <h2>Sosiale profiler</h2>
         <div class="social-profiles">
-          <a href="https://www.linkedin.com/in/emil-berglund-1b1b3b1b3/" target="_blank">
-            <img src="path/to/linkedin-icon.png" alt="LinkedIn" />
+          <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
+            <img :src="LinkedInIcon" alt="Linkedin">
+          </a>
+          <a href="https://github.com/EmilB04" target="_blank">
+            <img :src="GitHubIcon" alt="GitHub" />
           </a>
           <a href="" target="_blank">
-            <img src="path/to/github-icon.png" alt="GitHub" />
-          </a>
-          <a href="" target="_blank">
-            <img src="path/to/twitter-icon.png" alt="Instagram" />
+            <img :src="InstagramIcon" alt="Instagram" />
           </a>
         </div>
       </section>
@@ -88,15 +88,20 @@
 </template>
 
 <script scoped>
-// Import img from assets/images
-import emilBerglund from 'src/assets/images/IMG_0410.jpg';
+import EmilBerglund from 'src/assets/images/IMG_0410.jpg';
+import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
+import GitHubIcon from 'src/assets/icons/github_icon.png';
+import InstagramIcon from 'src/assets/icons/instagram_icon.png';
 export default {
   name: 'IndexPage',
   data() {
     return {
       sections: ['about', 'skills', 'contact', 'social'],
       scrollButtonLabel: 'Til neste seksjon',
-      emilBerglund
+      EmilBerglund,
+      LinkedInIcon,
+      GitHubIcon,
+      InstagramIcon
     };
   },
   methods: {
@@ -160,6 +165,17 @@ main {
   display: flex;
   flex-direction: column;
 }
+h1 {
+  font-size: 5rem;
+  font-weight: 500;
+}
+h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+p {
+  font-size: 1.5rem;
+}
 
 .full-screen {
   height: 100vh;
@@ -212,6 +228,10 @@ main {
   right: 20px;
   background-color: black;
   color: white;
+}
+
+#social img {
+  width: 50px;
 }
 
 footer {
