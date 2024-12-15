@@ -42,28 +42,40 @@
           Som informatikk student får man en breddelære innenfor informasjonsteknologi.
           Under vil du kunne se en oversikt over mine ferdigheter og kunnskaper.
         </p>
-        <div class="skills">
+        <section class="skills">
           <div class="skill">
-            <img src="path/to/html-icon.png" alt="HTML" />
+            <i class="fab fa-html5"></i>
             <p>HTML</p>
           </div>
           <div class="skill">
-            <img src="path/to/css-icon.png" alt="CSS" />
+            <i class="fab fa-css3-alt"></i>
             <p>CSS</p>
           </div>
           <div class="skill">
-            <img src="path/to/js-icon.png" alt="JavaScript" />
-            <p>JavaScript</p>
+            <i class="fab fa-sass"></i>
+            <p>SASS</p>
           </div>
           <div class="skill">
-            <img src="path/to/vue-icon.png" alt="Vue.js" />
-            <p>Vue.js</p>
+            <i class="fab fa-python"></i>
+            <p>Python</p>
           </div>
           <div class="skill">
-            <img src="path/to/quasar-icon.png" alt="Quasar" />
-            <p>Quasar</p>
+            <i class="fab fa-java"></i>
+            <p>Java</p>
           </div>
-        </div>
+          <div class="skill">
+            <i class="fas fa-database"></i>
+            <p>MYSQL</p>
+          </div>
+          <div class="skill">
+            <i class="fab fa-figma"></i>
+            <p>Figma</p>
+          </div>
+          <div class="skill">
+            <i class="fas fa-terminal"></i>
+            <p>C/Shell</p>
+          </div>
+        </section>
       </section>
 
       <section id="contact" class="full-screen contact-section">
@@ -74,10 +86,10 @@
         </p>
         <div>
           <a href="">
-            <img src="path/to/mail-icon.png" alt="E-post" />
+            <i class="fas fa-envelope"></i>
           </a>
           <a href="">
-            <img src="path/to/linkedin-icon.png" alt="LinkedIn" />
+            <i class="fab fa-linkedin"></i>
           </a>
         </div>
       </section>
@@ -86,13 +98,13 @@
         <h2>Sosiale profiler</h2>
         <div class="social-profiles">
           <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
-            <img :src="LinkedInIcon" alt="Linkedin">
+            <i class="fab fa-linkedin"></i>
           </a>
           <a href="https://github.com/EmilB04" target="_blank">
-            <img :src="GitHubIcon" alt="GitHub" />
+            <i class="fab fa-github"></i>
           </a>
-          <a href="" target="_blank">
-            <img :src="InstagramIcon" alt="Instagram" />
+          <a href="https://www.instagram.com/emilberglund04/" target="_blank">
+            <i class="fab fa-instagram"></i>
           </a>
         </div>
       </section>
@@ -126,6 +138,8 @@
 import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
 import GitHubIcon from 'src/assets/icons/github_icon.png';
 import InstagramIcon from 'src/assets/icons/instagram_icon.png';
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
 export default {
   name: 'IndexPage',
   data() {
@@ -182,7 +196,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 header {
   text-align: center;
 }
@@ -242,6 +256,7 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  font-size: 1.5rem;
 }
 
 .skill {
@@ -252,8 +267,13 @@ p {
 
 .social-profiles {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   gap: 20px;
+}
+
+.social-profiles a {
+  font-size: 3rem;
+  color: black;
 }
 
 .scroll-btn {
@@ -262,10 +282,6 @@ p {
   right: 20px;
   background-color: black;
   color: white;
-}
-
-#social img {
-  width: 50px;
 }
 
 footer {
