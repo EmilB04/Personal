@@ -1,27 +1,34 @@
 <template>
-  <q-page class="column">
+  <q-page class="columm">
     <header id="top">
-      <h1>Velkommen</h1>
-      <nav>
+      <nav class="q-my-md">
         <q-btn flat label="Om" @click="scrollToSection('about')" />
         <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
         <q-btn flat label="Kontakt" @click="scrollToSection('contact')" />
         <q-btn flat label="Sosiale profiler" @click="scrollToSection('social')" />
+        <q-btn flat label="Kommentarer på mitt arbeid" @click="scrollToSection('comments')" />
       </nav>
     </header>
 
     <main>
       <section id="about" class="full-screen about-section">
-        <h2>Om meg</h2>
+        <h1 class="q-mx-none text-left">Hei, jeg er Emil Berglund. <br> En Informatikk student.</h1>
         <article>
           <p>
-            Hei! Jeg er Emil Berglund, en bachelorstudent i Informatikk ved HIØ i Halden.
+            Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HIØ i Halden.
             Mitt studieløp startet høsten 2023 og jeg ferdigekamniert våren 2026.
-            Jeg har spesielisert meg innen Programmering, og driver på siden med selvlæring av Vue og Quasar.
+            Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar i tillegg.
           </p>
           <p>
-            Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse for teknologi og elektronikk.
+            Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse for
+            teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
             På fritiden liker jeg å spille videospill, se på film og serier, og være sosial.
+          </p>
+          <p>
+            Som person er jeg veldig pliktoppfyllende, strukturert og nøyaktig. Jeg er også veldig lærevillig og liker å
+            utfordre meg selv.
+            Jeg ser på meg selv som en person som er lett å samarbeide med og som er flink til å kommunisere.
+            Jeg er også veldig opptatt av å levere kvalitet og å være stolt av det jeg leverer.
           </p>
         </article>
         <article>
@@ -31,6 +38,10 @@
 
       <section id="skills" class="full-screen skills-section">
         <h2>Kunnskap</h2>
+        <p>
+          Som informatikk student får man en breddelære innenfor informasjonsteknologi.
+          Under vil du kunne se en oversikt over mine ferdigheter og kunnskaper.
+        </p>
         <div class="skills">
           <div class="skill">
             <img src="path/to/html-icon.png" alt="HTML" />
@@ -57,8 +68,18 @@
 
       <section id="contact" class="full-screen contact-section">
         <h2>Kontakt</h2>
-        <p>Du kan kontakte meg på e-post: <a href="mailto:emil.berglund@live.no">emil.berglund@live.no</a></p>
-        <p>Alternativt kontakt med på telefon: <a href="tel:+4798189601">+47 981 89 601</a></p>
+        <p>
+          Ønsker du å kommme i kontakt med meg?
+          Send meg gjerne en E-post eller en melding på LinkedIn.
+        </p>
+        <div>
+          <a href="">
+            <img src="path/to/mail-icon.png" alt="E-post" />
+          </a>
+          <a href="">
+            <img src="path/to/linkedin-icon.png" alt="LinkedIn" />
+          </a>
+        </div>
       </section>
 
       <section id="social" class="full-screen social-section">
@@ -76,6 +97,22 @@
         </div>
       </section>
 
+      <section id="comments" class="full-screen">
+        <h2>Kommentarer på mitt arbeid fra tidligere arbeidsgivere</h2>
+        <p>
+          Her vil det komme kommentarer på mitt arbeid.
+        </p>
+        <section id="work-comments">
+          <article>
+            <h3>Moss KF</h3>
+            <p>Utdtypende tekst:</p>
+          </article>
+          <article>
+            <h3>Specsavers</h3>
+            <p>Utdypende tekst:</p>
+          </article>
+        </section>
+      </section>
       <footer>
         <p>&copy; 2024 Emil Berglund. Alle rettigheter reservert.</p>
       </footer>
@@ -93,7 +130,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      sections: ['about', 'skills', 'contact', 'social'],
+      sections: ['about', 'skills', 'contact', 'social', 'comments'],
       scrollButtonLabel: 'Til neste seksjon',
       LinkedInIcon,
       GitHubIcon,
@@ -120,7 +157,7 @@ export default {
       }
 
       // If at the bottom, scroll to the top
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
       this.ChangeButtonLabel();
     },
     ChangeButtonLabel() {
@@ -148,7 +185,6 @@ export default {
 <style scoped>
 header {
   text-align: center;
-  margin-bottom: 20px;
 }
 
 nav {
@@ -161,16 +197,20 @@ main {
   display: flex;
   flex-direction: column;
 }
+
 h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   font-weight: 500;
+  line-height: 1.4;
 }
+
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 500;
 }
+
 p {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .full-screen {
@@ -178,9 +218,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
+  padding-inline: 50px;
 }
 
 .about-section {
