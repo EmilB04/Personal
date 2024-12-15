@@ -25,9 +25,7 @@
           </p>
         </article>
         <article>
-          <q-img style="width: 375px; height: 375px;">
-            <img :src="EmilBerglund" style="width: 100%;">
-          </q-img>
+
         </article>
       </section>
 
@@ -88,7 +86,6 @@
 </template>
 
 <script scoped>
-import EmilBerglund from 'src/assets/images/IMG_0410.jpg';
 import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
 import GitHubIcon from 'src/assets/icons/github_icon.png';
 import InstagramIcon from 'src/assets/icons/instagram_icon.png';
@@ -98,7 +95,6 @@ export default {
     return {
       sections: ['about', 'skills', 'contact', 'social'],
       scrollButtonLabel: 'Til neste seksjon',
-      EmilBerglund,
       LinkedInIcon,
       GitHubIcon,
       InstagramIcon
