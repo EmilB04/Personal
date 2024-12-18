@@ -109,7 +109,7 @@
         </div>
       </section>
 
-      <section id="comments" class="full-screen">
+      <section id="comments" class="full-screen comments-section">
         <h2>Kommentarer på mitt arbeid fra tidligere arbeidsgivere</h2>
         <p>
           Her vil det komme kommentarer på mitt arbeid.
@@ -236,11 +236,11 @@ p {
 }
 
 .about-section {
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);
 }
 
 .skills-section {
-  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  background: linear-gradient(135deg, #67f664 0%, #fbc2eb 100%);
 }
 
 .contact-section {
@@ -248,7 +248,11 @@ p {
 }
 
 .social-section {
-  background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+  background: linear-gradient(135deg, #fbfda1 0%, #c2e9fb 100%);
+}
+
+.comments-section {
+  background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
 }
 
 .skills {
