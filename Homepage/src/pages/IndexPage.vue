@@ -92,14 +92,14 @@
             Ønsker du å kommme i kontakt med meg?
             Send meg gjerne en E-post eller en melding på LinkedIn.
           </p>
-          <div>
-            <a href="">
+          <article>
+            <a href="mailto:emil.berglund@live.no">
               <i class="fas fa-envelope"></i>
             </a>
-            <a href="">
+            <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
               <i class="fab fa-linkedin"></i>
             </a>
-          </div>
+          </article>
         </div>
       </section>
 
@@ -217,10 +217,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-header {
-  text-align: center;
-}
-
 nav {
   display: flex;
   justify-content: center;
@@ -252,6 +248,12 @@ p {
   font-size: 1rem;
 }
 
+footer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+
 .full-screen {
   height: 100vh;
   display: flex;
@@ -266,15 +268,52 @@ p {
 
 .skills-section {
   background: linear-gradient(135deg, #67f664 0%, #fbc2eb 100%);
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+  }
+
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contact-section {
   background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+
+  article {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+      color: black;
+      font-size: 3rem;
+    }
+  }
 }
 
 .social-section {
   background: linear-gradient(135deg, #fbfda1 0%, #c2e9fb 100%);
+
+  .social-profiles {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+
+    a {
+      color: black;
+      font-size: 3rem;
+    }
+  }
 }
+
 
 .comments-section {
   background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
@@ -285,42 +324,12 @@ p {
   margin: 0 auto;
 }
 
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  font-size: 1.5rem;
-}
-
-.skill {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-profiles {
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.social-profiles a {
-  font-size: 3rem;
-  color: black;
-}
-
 .scroll-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: black;
   color: white;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
 }
 
 @media screen and (max-width: 600px) {
