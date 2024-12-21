@@ -6,131 +6,151 @@
         <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
         <q-btn flat label="Kontakt" @click="scrollToSection('contact')" />
         <q-btn flat label="Sosiale profiler" @click="scrollToSection('social')" />
-        <q-btn flat label="Kommentarer på mitt arbeid" @click="scrollToSection('comments')" />
+        <q-btn flat label="Tilbakemeldinger" @click="scrollToSection('comments')" />
       </nav>
     </header>
-
     <main>
       <section id="about" class="full-screen about-section">
-        <h1 class="q-mx-none text-left">Hei, jeg er Emil Berglund. <br> En Informatikk student.</h1>
-        <article>
-          <p>
-            Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HIØ i Halden.
-            Mitt studieløp startet høsten 2023 og jeg ferdigekamniert våren 2026.
-            Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar i tillegg.
-          </p>
-          <p>
-            Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse for
-            teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
-            På fritiden liker jeg å spille videospill, se på film og serier, og være sosial.
-          </p>
-          <p>
-            Som person er jeg veldig pliktoppfyllende, strukturert og nøyaktig. Jeg er også veldig lærevillig og liker å
-            utfordre meg selv.
-            Jeg ser på meg selv som en person som er lett å samarbeide med og som er flink til å kommunisere.
-            Jeg er også veldig opptatt av å levere kvalitet og å være stolt av det jeg leverer.
-          </p>
-        </article>
-        <article>
+        <div class="content">
+          <h1 class="q-mx-none text-left">Hei, jeg er Emil Berglund. <br> En Informatikk student.</h1>
+          <article>
+            <p>
+              Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HIØ i Halden.
+              Mitt studieløp startet høsten 2023 og jeg ferdigekamniert våren 2026.
+              Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar i
+              tillegg.
+            </p>
+            <p>
+              Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse
+              for
+              teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
+              På fritiden liker jeg å spille videospill, se på film og serier, og være sosial.
+            </p>
+            <p>
+              Som person er jeg veldig pliktoppfyllende, strukturert og nøyaktig. Jeg er også veldig lærevillig og
+              liker
+              å
+              utfordre meg selv.
+              Jeg ser på meg selv som en person som er lett å samarbeide med og som er flink til å kommunisere.
+              Jeg er også veldig opptatt av å levere kvalitet og å være stolt av det jeg leverer.
+            </p>
+          </article>
+          <article>
 
-        </article>
+          </article>
+        </div>
       </section>
 
       <section id="skills" class="full-screen skills-section">
-        <h2>Kunnskap</h2>
-        <p>
-          Som informatikk student får man en breddelære innenfor informasjonsteknologi.
-          Under vil du kunne se en oversikt over mine ferdigheter og kunnskaper.
-        </p>
-        <section class="skills">
-          <div class="skill">
-            <i class="fab fa-html5"></i>
-            <p>HTML</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-css3-alt"></i>
-            <p>CSS</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-sass"></i>
-            <p>SASS</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-python"></i>
-            <p>Python</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-java"></i>
-            <p>Java</p>
-          </div>
-          <div class="skill">
-            <i class="fas fa-database"></i>
-            <p>MYSQL</p>
-          </div>
-          <div class="skill">
-            <i class="fab fa-figma"></i>
-            <p>Figma</p>
-          </div>
-          <div class="skill">
-            <i class="fas fa-terminal"></i>
-            <p>C/Shell</p>
-          </div>
-        </section>
+        <div class="content">
+          <h2>Kunnskap</h2>
+          <p>
+            Som informatikk student får man en breddelære innenfor informasjonsteknologi.
+            Under vil du kunne se en oversikt over mine ferdigheter og kunnskaper.
+          </p>
+          <section class="skills">
+            <div class="skill">
+              <i class="fab fa-html5"></i>
+              <p>HTML</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-css3-alt"></i>
+              <p>CSS</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-sass"></i>
+              <p>SASS</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-python"></i>
+              <p>Python</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-java"></i>
+              <p>Java</p>
+            </div>
+            <div class="skill">
+              <i class="fas fa-database"></i>
+              <p>MYSQL</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-figma"></i>
+              <p>Figma</p>
+            </div>
+            <div class="skill">
+              <i class="fas fa-terminal"></i>
+              <p>C/Shell</p>
+            </div>
+          </section>
+        </div>
       </section>
 
       <section id="contact" class="full-screen contact-section">
-        <h2>Kontakt</h2>
-        <p>
-          Ønsker du å kommme i kontakt med meg?
-          Send meg gjerne en E-post eller en melding på LinkedIn.
-        </p>
-        <div>
-          <a href="">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="">
-            <i class="fab fa-linkedin"></i>
-          </a>
+        <div class="content">
+          <h2>Kontakt</h2>
+          <p>
+            Ønsker du å kommme i kontakt med meg?
+            Send meg gjerne en E-post eller en melding på LinkedIn.
+          </p>
+          <div>
+            <a href="">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
         </div>
       </section>
 
       <section id="social" class="full-screen social-section">
-        <h2>Sosiale profiler</h2>
-        <div class="social-profiles">
-          <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
-            <i class="fab fa-linkedin"></i>
-          </a>
-          <a href="https://github.com/EmilB04" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.instagram.com/emilberglund04/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
+        <div class="content">
+          <h2>Sosiale profiler</h2>
+          <span class="social-profiles">
+            <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/EmilB04" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/emilberglund04/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </span>
         </div>
       </section>
 
       <section id="comments" class="full-screen comments-section">
-        <h2>Kommentarer på mitt arbeid fra tidligere arbeidsgivere</h2>
-        <p>
-          Her vil det komme kommentarer på mitt arbeid.
-        </p>
-        <section id="work-comments">
-          <article>
-            <h3>Moss KF</h3>
-            <p>Utdtypende tekst:</p>
-          </article>
-          <article>
-            <h3>Specsavers</h3>
-            <p>Utdypende tekst:</p>
-          </article>
-        </section>
+        <div class="content">
+          <h2>Tilbakemeldinger</h2>
+          <p>
+            Under vil du kunne se tilbakemeldinger på mitt arbeid fra tidligere arbeidsgivere og samarbeidspartnere
+            jeg har hatt.
+          </p>
+          <section id="work-comments">
+            <article>
+              <h3>Moss Kirkelige Fellesråd</h3>
+              <p>"Emil er en rolig og arbeidsom gutt. Han lærte oppgavene fort og jobbet
+                selvstendig.
+                Han lærte oppgavene raskt og jobbet godt."</p>
+              <i>-Inger-Lise Klette</i>
+            </article>
+            <article>
+              <h3>Specsavers</h3>
+              <p>"Emil er pliktoppfyllende og grundig. Han er en hyggelig kar som lærer raskt og har gjennomført
+                de oppgaver han har fatt på en god måte den tiden han var her."</p>
+              <i>-Bjørn Podhorny</i>
+            </article>
+          </section>
+        </div>
       </section>
-      <footer>
-        <p>&copy; 2024 Emil Berglund. Alle rettigheter reservert.</p>
-      </footer>
 
       <q-btn flat :label="scrollButtonLabel" @click="scrollToNextSection" class="scroll-btn" />
     </main>
+    <footer>
+      <p>&copy; 2024 Emil Berglund. Alle rettigheter reservert.</p>
+    </footer>
+
   </q-page>
 </template>
 
@@ -223,6 +243,11 @@ h2 {
   font-weight: 500;
 }
 
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
 p {
   font-size: 1rem;
 }
@@ -253,6 +278,11 @@ p {
 
 .comments-section {
   background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skills {
@@ -291,5 +321,38 @@ p {
 footer {
   text-align: center;
   margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 0.8rem;
+  }
+
+  nav {
+    gap: 0px;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .skills {
+    font-size: 1rem;
+  }
+
+  .social-profiles a {
+    font-size: 2rem;
+  }
+
 }
 </style>
