@@ -22,21 +22,15 @@
             </p>
             <p>
               Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse
-              for
-              teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
+              for teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
               På fritiden liker jeg å spille videospill, se på film og serier, og være sosial.
             </p>
             <p>
               Som person er jeg veldig pliktoppfyllende, strukturert og nøyaktig. Jeg er også veldig lærevillig og
-              liker
-              å
-              utfordre meg selv.
+              liker å utfordre meg selv.
               Jeg ser på meg selv som en person som er lett å samarbeide med og som er flink til å kommunisere.
               Jeg er også veldig opptatt av å levere kvalitet og å være stolt av det jeg leverer.
             </p>
-          </article>
-          <article>
-
           </article>
         </div>
       </section>
@@ -45,8 +39,9 @@
         <div class="content">
           <h2>Kunnskap</h2>
           <p>
-            Som informatikk student får man en breddelære innenfor informasjonsteknologi.
-            Under vil du kunne se en oversikt over mine ferdigheter og kunnskaper.
+            Som en Informatikk-student tilegner man seg et bredt spekter av kunnskap innenfor informasjonsteknologi.
+            Jeg har derfor tilegnet meg en rekke ferdigheter og kunnskaper.
+            Under vil du kunne se en oversikt.
           </p>
           <section class="skills">
             <div class="skill">
