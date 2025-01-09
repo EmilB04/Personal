@@ -544,7 +544,7 @@ footer {
       position: relative;
 
       h3 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 5vh;
     }
 
@@ -564,6 +564,7 @@ footer {
 
       .course {
         position: relative;
+        font-size: 1.2rem;
 
         &.top, &.bottom {
           top: 0;
@@ -574,6 +575,10 @@ footer {
     .navigation-buttons {
       bottom: 150px;
       gap: 20px;
+
+      button{
+        padding: 6px 12px;
+      }
     }
   }
 
