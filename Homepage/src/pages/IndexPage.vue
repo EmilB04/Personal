@@ -538,7 +538,8 @@ footer {
     article {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: right;
+      margin-top: 10vh;
       text-align: center;
       position: relative;
 
@@ -563,12 +564,6 @@ footer {
 
       .course {
         position: relative;
-        font-size: 1.5rem;
-        padding: 10px 15px;
-        background: white;
-        color: black;
-        border-radius: 5px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
         &.top, &.bottom {
           top: 0;
@@ -577,22 +572,8 @@ footer {
     }
 
     .navigation-buttons {
-      position: absolute;
-      bottom: 100px;
-      display: flex;
+      bottom: 150px;
       gap: 20px;
-
-      button {
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        border-radius: 5px;
-        transition: background-color 0.3s;
-
-      }
     }
   }
 
