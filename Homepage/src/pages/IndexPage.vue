@@ -380,9 +380,9 @@ footer {
       list-style: none;
       padding: 0;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      width: 80%;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      width: 95%;
     }
 
     .course {
@@ -395,11 +395,11 @@ footer {
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 
       &.top {
-        top: -120%;
+        top: -13vh;
       }
 
       &.bottom {
-        top: 1vh;
+        top: -5vh;
       }
     }
   }
