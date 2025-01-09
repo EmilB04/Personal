@@ -34,6 +34,48 @@
           </article>
         </div>
       </section>
+      <section id="timeline" class="timeline-section">
+        <div class="timeline-container">
+          <article id="semester-1">
+            <h3>Høst 2023</h3>
+            <ul>
+              <li>Programmering 1</li>
+              <li>Webutvikling</li>
+              <li>Design av digitale produkter</li>
+            </ul>
+          </article>
+          <article id="semester-2">
+            <h3>Vår 2024</h3>
+            <ul>
+              <li>Programmering 2</li>
+              <li>Databasesystemer</li>
+              <li>Innføring i datasikkerhet</li>
+            </ul>
+          </article>
+          <article id="semester-3">
+            <h3>Høst 2024</h3>
+            <ul>
+              <li>Innføring i operativsystemer</li>
+              <li>Diskret matematikk</li>
+              <li>Software Engineering og testing</li>
+            </ul>
+          </article>
+          <article id="semester-4">
+            <h3>Vår 2025</h3>
+            <ul>
+              <li>Rammeverk og .NET</li>
+              <li>Algoritmer og datastrukturer</li>
+              <li>Innføring i Generativ AI</li>
+              <li>Utvikling av interaktive nettsteder</li>
+            </ul>
+          </article>
+        </div>
+        <div class="navigation-buttons">
+          <button @click="prevSemester">Forrige</button>
+          <button @click="nextSemester">Neste</button>
+        </div>
+      </section>
+
 
       <section id="skills" class="full-screen skills-section">
         <div class="content">
@@ -159,8 +201,10 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      sections: ['about', 'skills', 'contact', 'social', 'comments'],
+      sections: ['about', 'timeline', 'skills', 'contact', 'social', 'comments'],
       scrollButtonLabel: 'Til neste seksjon',
+      currentSemester: 0,
+      semesters: ['semester-1', 'semester-2', 'semester-3', 'semester-4'],
       LinkedInIcon,
       GitHubIcon,
       InstagramIcon
@@ -200,10 +244,32 @@ export default {
       } else {
         this.scrollButtonLabel = 'Til neste seksjon';
       }
-    }
+    },
+    nextSemester() {
+      if (this.currentSemester < this.semesters.length - 1) {
+        this.currentSemester++;
+      } else {
+        this.currentSemester = 0; // Gå tilbake til første semester
+      }
+      this.scrollToSemester();
+    },
+    prevSemester() {
+      if (this.currentSemester > 0) {
+        this.currentSemester--;
+      } else {
+        this.currentSemester = this.semesters.length - 1; // Gå til siste semester
+      }
+      this.scrollToSemester();
+    },
+    scrollToSemester() {
+      const container = document.querySelector('.timeline-container');
+      const offset = -this.currentSemester * window.innerWidth;
+      container.style.transform = `translateX(${offset}px)`;
+    },
   },
   mounted() {
     window.addEventListener('scroll', this.ChangeButtonLabel);
+    this.scrollToSemester(); // Start på første semester
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.ChangeButtonLabel);
@@ -260,6 +326,73 @@ footer {
 .about-section {
   background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);
 }
+
+.timeline-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(135deg, #fad0c4 0%, #a1c4fd 100%);
+  overflow: hidden;
+
+  .timeline-container {
+    display: flex;
+    flex-shrink: 0;
+    width: 100vw;
+    height: 100vh;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  article {
+    flex: 0 0 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .navigation-buttons {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 20px;
+
+    button {
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+      }
+    }
+  }
+}
+
+
 
 .skills-section {
   background: linear-gradient(135deg, #67f664 0%, #fbc2eb 100%);
