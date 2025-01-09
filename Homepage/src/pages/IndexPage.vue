@@ -573,7 +573,7 @@ footer {
     }
 
     .navigation-buttons {
-      bottom: 150px;
+      bottom: 200px;
       gap: 20px;
 
       button{
