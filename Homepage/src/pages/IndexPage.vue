@@ -497,6 +497,8 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
+
+  // Mobil
   h1 {
     font-size: 2rem;
   }
@@ -525,6 +527,73 @@ footer {
 
   .social-profiles a {
     font-size: 2rem;
+  }
+
+  .timeline-section {
+    display: flex;
+
+    .timeline-container {
+      display: flex;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+
+      h3 {
+      font-size: 3rem;
+      margin-bottom: 5vh;
+    }
+
+      .timeline-line {
+        background: transparent;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        width: 80%;
+      }
+
+      .course {
+        position: relative;
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        background: white;
+        color: black;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+        &.top, &.bottom {
+          top: 0;
+        }
+      }
+    }
+
+    .navigation-buttons {
+      position: absolute;
+      bottom: 100px;
+      display: flex;
+      gap: 20px;
+
+      button {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+
+      }
+    }
   }
 
 }
