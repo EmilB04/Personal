@@ -3,6 +3,7 @@
     <header id="top">
       <nav class="q-my-md">
         <q-btn flat label="Om" @click="scrollToSection('about')" />
+        <q-btn flat label="Studie" @click="scrollToSection('timeline')" />
         <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
         <q-btn flat label="Kontakt" @click="scrollToSection('contact')" />
         <q-btn flat label="Sosiale profiler" @click="scrollToSection('social')" />
@@ -36,37 +37,42 @@
       </section>
       <section id="timeline" class="timeline-section">
         <div class="timeline-container">
+
           <article id="semester-1">
             <h3>Høst 2023</h3>
+            <div class="timeline-line"></div>
             <ul>
-              <li>Programmering 1</li>
-              <li>Webutvikling</li>
-              <li>Design av digitale produkter</li>
+              <li class="course top">Programmering 1</li>
+              <li class="course bottom">Webutvikling</li>
+              <li class="course top">Design av digitale produkter</li>
             </ul>
           </article>
           <article id="semester-2">
             <h3>Vår 2024</h3>
+            <div class="timeline-line"></div>
             <ul>
-              <li>Programmering 2</li>
-              <li>Databasesystemer</li>
-              <li>Innføring i datasikkerhet</li>
+              <li class="course bottom">Programmering 2</li>
+              <li class="course top">Databasesystemer</li>
+              <li class="course bottom">Innføring i datasikkerhet</li>
             </ul>
           </article>
           <article id="semester-3">
             <h3>Høst 2024</h3>
+            <div class="timeline-line"></div>
             <ul>
-              <li>Innføring i operativsystemer</li>
-              <li>Diskret matematikk</li>
-              <li>Software Engineering og testing</li>
+              <li class="course top">Innføring i operativsystemer</li>
+              <li class="course bottom">Diskret matematikk</li>
+              <li class="course top">Software Engineering og testing</li>
             </ul>
           </article>
           <article id="semester-4">
             <h3>Vår 2025</h3>
+            <div class="timeline-line"></div>
             <ul>
-              <li>Rammeverk og .NET</li>
-              <li>Algoritmer og datastrukturer</li>
-              <li>Innføring i Generativ AI</li>
-              <li>Utvikling av interaktive nettsteder</li>
+              <li class="course top">Rammeverk og .NET</li>
+              <li class="course bottom">Algoritmer og datastrukturer</li>
+              <li class="course top">Innføring i Generativ AI</li>
+              <li class="course bottom">Utvikling av interaktive nettsteder</li>
             </ul>
           </article>
         </div>
@@ -75,6 +81,7 @@
           <button @click="nextSemester">Neste</button>
         </div>
       </section>
+
 
 
       <section id="skills" class="full-screen skills-section">
@@ -352,19 +359,47 @@ footer {
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
 
     h3 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: 20vh;
+    }
+
+    .timeline-line {
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: black;
+      top: 55vh;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     ul {
       list-style: none;
       padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      width: 80%;
+    }
 
-      li {
-        font-size: 1.5rem;
-        margin: 0.5rem 0;
+    .course {
+      position: relative;
+      font-size: 1.5rem;
+      padding: 10px 15px;
+      background: white;
+      color: black;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+
+      &.top {
+        top: -120%;
+      }
+
+      &.bottom {
+        top: 1vh;
       }
     }
   }
@@ -391,6 +426,7 @@ footer {
     }
   }
 }
+
 
 
 
