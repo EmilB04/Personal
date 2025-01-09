@@ -192,9 +192,17 @@
       <q-btn flat :label="scrollButtonLabel" @click="scrollToNextSection" class="scroll-btn" />
     </main>
     <footer>
-      <p>&copy; 2024 Emil Berglund. Alle rettigheter reservert.</p>
+      <p>&copy; 2025 Emil Berglund. Alle rettigheter reservert.</p>
     </footer>
 
+
+    <!--TODO!-->
+    <!--
+    Lag dropdown menyer for hvert kurs i timelinen for desktop , evntuelt mobil også
+    Menyen skal inneholde informasjon om kurset, eksamen, pensum, læringsmål, og evt. annen relevant informasjon
+    Lages i JS eller TS og skal være dynamisk og kunne brukes for alle kursene
+    Informasjonen skal derfor ligge i Script delen av dokumentet
+    -->
   </q-page>
 </template>
 
