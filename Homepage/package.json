@@ -1,8 +1,8 @@
 {
   "name": "homepage",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "emilber",
+  "description": "Homepage for Emil Berglund",
+  "productName": "Emil Berglund",
   "author": "Emil Berglund <emil.berglund@live.no>",
   "private": true,
   "scripts": {
