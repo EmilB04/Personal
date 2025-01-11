@@ -5,7 +5,6 @@
         <q-btn flat label="Om" @click="scrollToSection('about')" />
         <q-btn flat label="Studie" @click="scrollToSection('timeline')" />
         <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
-        <q-btn flat label="Kontakt" @click="scrollToSection('contact')" />
         <q-btn flat label="Sosiale profiler" @click="scrollToSection('social')" />
         <q-btn flat label="Tilbakemeldinger" @click="scrollToSection('comments')" />
       </nav>
@@ -42,9 +41,9 @@
             <h3>Høst 2023</h3>
             <div class="timeline-line"></div>
             <ul>
-              <li class="course top">Programmering 1</li>
-              <li class="course bottom">Webutvikling</li>
-              <li class="course top">Design av digitale produkter</li>
+              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf10219.html"><li class="course top">Programmering 1</li></a>
+              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf10511.html"><li class="course bottom">Webutvikling</li></a>
+              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf14022.html"><li class="course top">Innføring i design av digitale produkter</li></a>
             </ul>
           </article>
           <article id="semester-2">
@@ -125,31 +124,27 @@
               <i class="fas fa-terminal"></i>
               <p>C/Shell</p>
             </div>
-          </section>
-        </div>
-      </section>
+            <div class="skill">
+              <i class="fab fa-vuejs"></i>
+              <p>Vue</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-quasar"></i>
+              <p>Quasar</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-git-alt"></i>
+              <p>Git</p>
+            </div>
 
-      <section id="contact" class="full-screen contact-section">
-        <div class="content">
-          <h2>Kontakt</h2>
-          <p>
-            Ønsker du å kommme i kontakt med meg?
-            Send meg gjerne en E-post eller en melding på LinkedIn.
-          </p>
-          <article>
-            <a href="mailto:emil.berglund@live.no">
-              <i class="fas fa-envelope"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </article>
+          </section>
         </div>
       </section>
 
       <section id="social" class="full-screen social-section">
         <div class="content">
           <h2>Sosiale profiler</h2>
+          <p>Ønsker du å komme i kontakt med meg, eller ta en sniktitt på hva jeg holder på med..</p>
           <span class="social-profiles">
             <a href="https://www.linkedin.com/in/emil-berglund-336135251/" target="_blank">
               <i class="fab fa-linkedin"></i>
@@ -157,8 +152,8 @@
             <a href="https://github.com/EmilB04" target="_blank">
               <i class="fab fa-github"></i>
             </a>
-            <a href="https://www.instagram.com/emilberglund04/" target="_blank">
-              <i class="fab fa-instagram"></i>
+            <a href="mailto:emil.berglund@live.no">
+              <i class="fas fa-envelope"></i>
             </a>
           </span>
         </div>
@@ -216,7 +211,7 @@ export default {
   name: 'IndexPage',
   data() {
     return {
-      sections: ['about', 'timeline', 'skills', 'contact', 'social', 'comments'],
+      sections: ['about', 'timeline', 'skills', 'social', 'comments'],
       scrollButtonLabel: 'Til neste seksjon',
       currentSemester: 0,
       semesters: ['semester-1', 'semester-2', 'semester-3', 'semester-4'],
@@ -292,303 +287,6 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.4;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1rem;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-
-.full-screen {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-inline: 50px;
-}
-
-.about-section {
-  background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);
-}
-
-.timeline-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  background: linear-gradient(135deg, #fad0c4 0%, #a1c4fd 100%);
-  overflow: hidden;
-
-  .timeline-container {
-    display: flex;
-    flex-shrink: 0;
-    width: 100vw;
-    height: 100vh;
-    transition: transform 0.5s ease-in-out;
-  }
-
-  article {
-    flex: 0 0 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-
-    h3 {
-      font-size: 3rem;
-      margin-bottom: 20vh;
-    }
-
-    .timeline-line {
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      background: black;
-      top: 55vh;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-evenly;
-      width: 95%;
-    }
-
-    .course {
-      position: relative;
-      font-size: 1.5rem;
-      padding: 10px 15px;
-      background: white;
-      color: black;
-      border-radius: 5px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-
-      &.top {
-        top: -13vh;
-      }
-
-      &.bottom {
-        top: -5vh;
-      }
-    }
-  }
-
-  .navigation-buttons {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
-    gap: 20px;
-
-    button {
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.9);
-      }
-    }
-  }
-}
-
-
-
-
-.skills-section {
-  background: linear-gradient(135deg, #67f664 0%, #fbc2eb 100%);
-
-  .skills {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    font-size: 1.5rem;
-  }
-
-  .skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-.contact-section {
-  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
-
-  article {
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-
-    a {
-      color: black;
-      font-size: 3rem;
-    }
-  }
-}
-
-.social-section {
-  background: linear-gradient(135deg, #fbfda1 0%, #c2e9fb 100%);
-
-  .social-profiles {
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-
-    a {
-      color: black;
-      font-size: 3rem;
-    }
-  }
-}
-
-
-.comments-section {
-  background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
-}
-
-.content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.scroll-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-}
-
-@media screen and (max-width: 600px) {
-
-  // Mobil
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.8rem;
-  }
-
-  nav {
-    gap: 0px;
-    padding: 0;
-    flex-direction: column;
-  }
-
-  .skills {
-    font-size: 1rem;
-  }
-
-  .social-profiles a {
-    font-size: 2rem;
-  }
-
-  .timeline-section {
-    display: flex;
-
-    .timeline-container {
-      display: flex;
-    }
-    article {
-      display: flex;
-      flex-direction: column;
-      justify-content: right;
-      margin-top: 10vh;
-      text-align: center;
-      position: relative;
-
-      h3 {
-      font-size: 2.5rem;
-      margin-bottom: 5vh;
-    }
-
-      .timeline-line {
-        background: transparent;
-      }
-
-      ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1rem;
-        width: 80%;
-      }
-
-      .course {
-        position: relative;
-        font-size: 1.2rem;
-
-        &.top, &.bottom {
-          top: 0;
-        }
-      }
-    }
-
-    .navigation-buttons {
-      bottom: 200px;
-      gap: 20px;
-
-      button{
-        padding: 6px 12px;
-      }
-    }
-  }
-
-}
+<style scoped lang="css">
+@import 'src/css/IndexStyle.css';
 </style>
