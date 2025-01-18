@@ -17,13 +17,14 @@
             <p>
               Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HIØ i Halden.
               Mitt studieløp startet høsten 2023 og jeg ferdigekamniert våren 2026.
-              Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar i
-              tillegg.
+              Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar på
+              fritiden.
             </p>
             <p>
               Ved siden av studie jobber jeg hyppig på Elkjøp som salgsrådgiver. Jeg har generelt en stor interesse
               for teknologi og elektronikk og liker å holde meg oppdatert på det nyeste.
-              På fritiden liker jeg å spille videospill, se på film og serier, og være sosial.
+              På fritiden liker jeg å spille videospill, se på film og serier, og være sosial, enten dette er digitalt
+              eller fysisk.
             </p>
             <p>
               Som person er jeg veldig pliktoppfyllende, strukturert og nøyaktig. Jeg er også veldig lærevillig og
@@ -36,14 +37,15 @@
       </section>
       <section id="timeline" class="timeline-section">
         <div class="timeline-container">
-
           <article v-for="(semester, index) in CourseList" :key="index" :id="semester.id">
-            <h3>{{ semester.title }}</h3>
+            <h3>{{ semester.semester }}</h3>
             <div class="timeline-line"></div>
             <ul>
               <li v-for="(course, index) in semester.courses" :key="index"
                 :class="{ 'course top': index % 2 === 0, 'course bottom': index % 2 !== 0 }">
-                <a :href="course.link">{{ course.name }}</a>
+                <a :href="course.link" class="course-link" target="_blank">
+                  {{ course.name }}
+                </a>
               </li>
             </ul>
           </article>
@@ -53,8 +55,6 @@
           <button @click="nextSemester">Neste</button>
         </div>
       </section>
-
-
 
       <section id="skills" class="full-screen skills-section">
         <div class="content">
@@ -167,8 +167,8 @@
 
 <script scoped>
 // ----------------- External CSS/JS ------------------------
-import CourseList from 'assets/CourseList.js';
-import { WorkComments, randomIndex } from 'assets/WorkComments.js';
+import CourseList from 'src/assets/CourseList.js';
+import { WorkComments, randomIndex } from 'src/assets/WorkComments.js';
 // ----------------- Icons ----------------------------------
 import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
 import GitHubIcon from 'src/assets/icons/github_icon.png';
