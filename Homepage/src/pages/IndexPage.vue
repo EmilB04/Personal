@@ -1,7 +1,7 @@
 <template>
   <q-page class="columm">
     <header id="top">
-      <nav class="q-my-md">
+      <nav class="q-my-md flex justify-center">
         <q-btn flat label="Om" @click="scrollToSection('about')" />
         <q-btn flat label="Studie" @click="scrollToSection('timeline')" />
         <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
@@ -9,7 +9,7 @@
         <q-btn flat label="Tilbakemeldinger" @click="scrollToSection('comments')" />
       </nav>
     </header>
-    <main>
+    <main class="flex column">
       <section id="about" class="full-screen about-section">
         <div class="content">
           <h1 class="q-mx-none text-left">Hei, jeg er Emil Berglund. <br> En Informatikk student.</h1>
@@ -35,6 +35,7 @@
           </article>
         </div>
       </section>
+
       <section id="timeline" class="timeline-section">
         <div class="timeline-container">
           <article v-for="(semester, index) in CourseList" :key="index" :id="semester.id">
@@ -150,7 +151,7 @@
 
       <q-btn flat :label="scrollButtonLabel" @click="scrollToNextSection" class="scroll-btn" />
     </main>
-    <footer>
+    <footer class="text-center q-ma-sm">
       <p>&copy; 2025 Emil Berglund. Alle rettigheter reservert.</p>
     </footer>
 
@@ -166,94 +167,11 @@
 </template>
 
 <script scoped>
-// ----------------- External CSS/JS ------------------------
-import CourseList from 'src/assets/CourseList.js';
-import { WorkComments, randomIndex } from 'src/assets/WorkComments.js';
-// ----------------- Icons ----------------------------------
-import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
-import GitHubIcon from 'src/assets/icons/github_icon.png';
-import InstagramIcon from 'src/assets/icons/instagram_icon.png';
-// ----------------- Font Awesome  --------------------------
-import '@fortawesome/fontawesome-free/css/all.css';
-import '@fortawesome/fontawesome-free/js/all.js';
-export default {
-  name: 'IndexPage',
-  data() {
-    return {
-      // ----------------- Data ------------------------
-      CourseList, WorkComments,
-      // ----------------- Variables -------------------
-      sections: ['about', 'timeline', 'skills', 'social', 'comments'],
-      semesters: ['semester-1', 'semester-2', 'semester-3', 'semester-4'],
-      currentSemester: 0,
-      // ----------------- Methods ---------------------
-      currentIndex: randomIndex(),
-      scrollButtonLabel: 'Til neste seksjon',
-      // ----------------- Icons -----------------------
-      LinkedInIcon, GitHubIcon, InstagramIcon
-    };
-  },
-  methods: {
-    scrollToSection(sectionId) {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
-    },
-    scrollToNextSection() {
-      const currentScrollPos = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      for (let i = 0; i < this.sections.length; i++) {
-        const section = document.getElementById(this.sections[i]);
-        if (section.offsetTop > currentScrollPos + viewportHeight / 2) {
-          section.scrollIntoView({ behavior: 'smooth' });
-          this.ChangeButtonLabel();
-          return;
-        }
-      }
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-      this.ChangeButtonLabel();
-    },
-    ChangeButtonLabel() {
-      const currentScrollPos = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const isAtBottom = currentScrollPos + viewportHeight >= documentHeight;
+import IndexScript from 'src/assets/IndexScript.js';
 
-      if (isAtBottom || currentScrollPos + viewportHeight >= documentHeight * 0.9) {
-        this.scrollButtonLabel = 'Til toppen';
-      } else {
-        this.scrollButtonLabel = 'Til neste seksjon';
-      }
-    },
-    nextSemester() {
-      if (this.currentSemester < this.semesters.length - 1) {
-        this.currentSemester++;
-      } else {
-        this.currentSemester = 0; // Gå tilbake til første semester
-      }
-      this.scrollToSemester();
-    },
-    prevSemester() {
-      if (this.currentSemester > 0) {
-        this.currentSemester--;
-      } else {
-        this.currentSemester = this.semesters.length - 1; // Gå til siste semester
-      }
-      this.scrollToSemester();
-    },
-    scrollToSemester() {
-      const container = document.querySelector('.timeline-container');
-      const offset = -this.currentSemester * window.innerWidth;
-      container.style.transform = `translateX(${offset}px)`;
-    },
-    startCommentRotation() {
-      this.commentInterval = setInterval(() => {
-        this.currentIndex =
-          (this.currentIndex + 1) % this.WorkComments.length;
-      }, 8000); // Bytter kommentar hvert 8. sekund
-    }
-  },
+export default {
+  name: 'IndexScript',
+  mixins: [IndexScript], // Bruk logikken fra den eksterne filen
   mounted() {
     window.addEventListener('scroll', this.ChangeButtonLabel);
     this.scrollToSemester();
@@ -262,8 +180,8 @@ export default {
   beforeUnmount() {
     window.removeEventListener('scroll', this.ChangeButtonLabel);
     clearInterval(this.commentInterval); // Rydd opp intervallet for å unngå minnelekkasjer
-  }
-}
+  },
+};
 </script>
 
 <style scoped lang="css">
