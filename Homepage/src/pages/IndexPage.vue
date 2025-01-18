@@ -75,6 +75,10 @@
               <p>CSS</p>
             </div>
             <div class="skill">
+              <i class="fab fa-js"></i>
+              <p>JavaScript</p>
+            </div>
+            <div class="skill">
               <i class="fab fa-sass"></i>
               <p>SASS</p>
             </div>
@@ -101,6 +105,14 @@
             <div class="skill">
               <i class="fab fa-vuejs"></i>
               <p>Vue</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-react"></i>
+              <p>React</p>
+            </div>
+            <div class="skill">
+              <i class="fab fa-node-js"></i>
+              <p>Node.js</p>
             </div>
             <div class="skill">
               <i class="fab fa-quasar"></i>
