@@ -1,39 +1,37 @@
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+body {
+  font-size: 16px;
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
 
-main {
-  display: flex;
-  flex-direction: column;
-}
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  h3 {
+    font-size: 2rem;
+    font-weight: 500;
+  }
 
-h1 {
-  font-size: 3rem;
-  font-weight: 500;
-  line-height: 1.4;
+  p {
+    font-size: 1.2rem;
+  }
+  footer {
+    text-align: center;
+    margin-top: 20px;
+  }
 }
-
-h2 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1rem;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
 
 .full-screen {
   height: 100vh;
@@ -186,9 +184,22 @@ footer {
 
 .comments-section {
   background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
+  p {
+    font-size: 1.5rem;
+  }
+  #work-comments {
+    p {
+      margin-top: 3rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    i {
+      font-size: 1.2rem;
+    }
+  }
 }
 
-
+/* Overgangsnavn matcher `name` fra template */
 
 @media screen and (max-width: 600px) {
   h1 {
@@ -236,9 +247,9 @@ footer {
       position: relative;
 
       h3 {
-      font-size: 2.5rem;
-      margin-bottom: 5vh;
-    }
+        font-size: 2.5rem;
+        margin-bottom: 5vh;
+      }
 
       .timeline-line {
         background: transparent;
@@ -258,7 +269,8 @@ footer {
         position: relative;
         font-size: 1.2rem;
 
-        &.top, &.bottom {
+        &.top,
+        &.bottom {
           top: 0;
         }
       }
@@ -268,7 +280,7 @@ footer {
       bottom: 200px;
       gap: 20px;
 
-      button{
+      button {
         padding: 6px 12px;
       }
     }

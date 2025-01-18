@@ -37,41 +37,14 @@
       <section id="timeline" class="timeline-section">
         <div class="timeline-container">
 
-          <article id="semester-1">
-            <h3>Høst 2023</h3>
+          <article v-for="(semester, index) in CourseList" :key="index" :id="semester.id">
+            <h3>{{ semester.title }}</h3>
             <div class="timeline-line"></div>
             <ul>
-              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf10219.html"><li class="course top">Programmering 1</li></a>
-              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf10511.html"><li class="course bottom">Webutvikling</li></a>
-              <a href="https://www.hiof.no/studier/emner/iio/itk/2023/host/itf14022.html"><li class="course top">Innføring i design av digitale produkter</li></a>
-            </ul>
-          </article>
-          <article id="semester-2">
-            <h3>Vår 2024</h3>
-            <div class="timeline-line"></div>
-            <ul>
-              <li class="course bottom">Programmering 2</li>
-              <li class="course top">Databasesystemer</li>
-              <li class="course bottom">Innføring i datasikkerhet</li>
-            </ul>
-          </article>
-          <article id="semester-3">
-            <h3>Høst 2024</h3>
-            <div class="timeline-line"></div>
-            <ul>
-              <li class="course top">Innføring i operativsystemer</li>
-              <li class="course bottom">Diskret matematikk</li>
-              <li class="course top">Software Engineering og testing</li>
-            </ul>
-          </article>
-          <article id="semester-4">
-            <h3>Vår 2025</h3>
-            <div class="timeline-line"></div>
-            <ul>
-              <li class="course top">Rammeverk og .NET</li>
-              <li class="course bottom">Algoritmer og datastrukturer</li>
-              <li class="course top">Innføring i Generativ AI</li>
-              <li class="course bottom">Utvikling av interaktive nettsteder</li>
+              <li v-for="(course, index) in semester.courses" :key="index"
+                :class="{ 'course top': index % 2 === 0, 'course bottom': index % 2 !== 0 }">
+                <a :href="course.link">{{ course.name }}</a>
+              </li>
             </ul>
           </article>
         </div>
@@ -167,19 +140,10 @@
             jeg har hatt.
           </p>
           <section id="work-comments">
-            <article>
-              <h3>Moss Kirkelige Fellesråd</h3>
-              <p>"Emil er en rolig og arbeidsom gutt. Han lærte oppgavene fort og jobbet
-                selvstendig.
-                Han lærte oppgavene raskt og jobbet godt."</p>
-              <i>-Inger-Lise Klette</i>
-            </article>
-            <article>
-              <h3>Specsavers</h3>
-              <p>"Emil er pliktoppfyllende og grundig. Han er en hyggelig kar som lærer raskt og har gjennomført
-                de oppgaver han har fatt på en god måte den tiden han var her."</p>
-              <i>-Bjørn Podhorny</i>
-            </article>
+            <div v-if="WorkComments.length > 0" :key="currentIndex" class="comment">
+              <p>{{ WorkComments[currentIndex].comment }}</p>
+              <i class="author">-{{ WorkComments[currentIndex].author }}</i>
+            </div>
           </section>
         </div>
       </section>
@@ -202,22 +166,31 @@
 </template>
 
 <script scoped>
+// ----------------- External CSS/JS ------------------------
+import CourseList from 'assets/CourseList.js';
+import { WorkComments, randomIndex } from 'assets/WorkComments.js';
+// ----------------- Icons ----------------------------------
 import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
 import GitHubIcon from 'src/assets/icons/github_icon.png';
 import InstagramIcon from 'src/assets/icons/instagram_icon.png';
+// ----------------- Font Awesome  --------------------------
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 export default {
   name: 'IndexPage',
   data() {
     return {
+      // ----------------- Data ------------------------
+      CourseList, WorkComments,
+      // ----------------- Variables -------------------
       sections: ['about', 'timeline', 'skills', 'social', 'comments'],
-      scrollButtonLabel: 'Til neste seksjon',
-      currentSemester: 0,
       semesters: ['semester-1', 'semester-2', 'semester-3', 'semester-4'],
-      LinkedInIcon,
-      GitHubIcon,
-      InstagramIcon
+      currentSemester: 0,
+      // ----------------- Methods ---------------------
+      currentIndex: randomIndex(),
+      scrollButtonLabel: 'Til neste seksjon',
+      // ----------------- Icons -----------------------
+      LinkedInIcon, GitHubIcon, InstagramIcon
     };
   },
   methods: {
@@ -238,8 +211,6 @@ export default {
           return;
         }
       }
-
-      // If at the bottom, scroll to the top
       document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
       this.ChangeButtonLabel();
     },
@@ -276,13 +247,21 @@ export default {
       const offset = -this.currentSemester * window.innerWidth;
       container.style.transform = `translateX(${offset}px)`;
     },
+    startCommentRotation() {
+      this.commentInterval = setInterval(() => {
+        this.currentIndex =
+          (this.currentIndex + 1) % this.WorkComments.length;
+      }, 8000); // Bytter kommentar hvert 8. sekund
+    }
   },
   mounted() {
     window.addEventListener('scroll', this.ChangeButtonLabel);
-    this.scrollToSemester(); // Start på første semester
+    this.scrollToSemester();
+    this.startCommentRotation();
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.ChangeButtonLabel);
+    clearInterval(this.commentInterval); // Rydd opp intervallet for å unngå minnelekkasjer
   }
 }
 </script>
