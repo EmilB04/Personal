@@ -198,20 +198,19 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.8rem;
+  body {
+    h1 {
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 0.9rem;
+    }
   }
 
   nav {
@@ -237,14 +236,13 @@ body {
     article {
       display: flex;
       flex-direction: column;
-      justify-content: right;
-      margin-top: 10vh;
+      align-items: center;
       text-align: center;
       position: relative;
 
       h3 {
         font-size: 2.5rem;
-        margin-bottom: 5vh;
+        top: 5vh;
       }
 
       .timeline-line {
