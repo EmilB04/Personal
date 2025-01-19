@@ -79,7 +79,8 @@ body {
 
     h3 {
       font-size: 3rem;
-      margin-bottom: 20vh;
+      position: absolute;
+      top: 20vh;
     }
 
     .timeline-line {
@@ -114,11 +115,11 @@ body {
       position: relative;
 
       &.top {
-        top: -13vh;
+        top: -5vh;
       }
 
       &.bottom {
-        top: -5vh;
+        top: 15vh;
       }
     }
   }
