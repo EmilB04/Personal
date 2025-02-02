@@ -19,7 +19,7 @@ export default {
       currentSemester: 0,
       // ----------------- Methods ---------------------
       currentIndex: randomIndex(),
-      scrollButtonLabel: 'Til neste seksjon',
+      isAtBottom: false,
       // ----------------- Icons -----------------------
       LinkedInIcon,
       GitHubIcon,
@@ -34,18 +34,22 @@ export default {
       }
     },
     scrollToNextSection() {
-      const currentScrollPos = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      for (let i = 0; i < this.sections.length; i++) {
-        const section = document.getElementById(this.sections[i]);
-        if (section.offsetTop > currentScrollPos + viewportHeight / 2) {
-          section.scrollIntoView({ behavior: 'smooth' });
-          this.ChangeButtonLabel();
-          return;
+      if (this.isAtBottom) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const currentScrollPos = window.scrollY;
+        const viewportHeight = window.innerHeight;
+        for (let i = 0; i < this.sections.length; i++) {
+          const section = document.getElementById(this.sections[i]);
+          if (section.offsetTop > currentScrollPos + viewportHeight / 2) {
+            section.scrollIntoView({ behavior: 'smooth' });
+            this.ChangeButtonLabel();
+            return;
+          }
         }
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        this.ChangeButtonLabel();
       }
-      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
-      this.ChangeButtonLabel();
     },
     ChangeButtonLabel() {
       const currentScrollPos = window.scrollY;
@@ -57,9 +61,9 @@ export default {
         isAtBottom ||
         currentScrollPos + viewportHeight >= documentHeight * 0.9
       ) {
-        this.scrollButtonLabel = 'Til toppen';
+        this.isAtBottom = 'true';
       } else {
-        this.scrollButtonLabel = 'Til neste seksjon';
+        this.isAtBottom = false;
       }
     },
     nextSemester() {

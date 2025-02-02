@@ -1,12 +1,37 @@
+#bg-app {
+  background-color: #010a4e;
+}
+
 body {
   font-size: 16px;
-  nav {
-    gap: 10px;
+  padding: 0;
+  header {
+    color: white;
+    padding-block: 1rem;
+    nav {
+      gap: 10px;
+      margin: 0 10%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    #name-tag {
+      background-color: #f1376e;
+      border-radius: 20px;
+      align-self: baseline;
+    }
+  }
+  #nav-seperator {
+    max-width: 1200px;
+    margin: 0 auto;
+    border: 0;
+    height: 1px;
+    background: #ffff;
   }
   h1 {
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.4;
+    background: linear-gradient(135deg, #f1376e 0%, #010a4e 70%);
   }
 
   h2 {
@@ -47,7 +72,9 @@ body {
 }
 
 .about-section {
-  background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);
+  /*background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);*/
+  background-color: #010a4e;
+  color: white;
 }
 
 .timeline-section {
@@ -57,7 +84,8 @@ body {
   align-items: center;
   height: 100vh;
   position: relative;
-  background: linear-gradient(135deg, #fad0c4 0%, #a1c4fd 100%);
+  /* background: linear-gradient(135deg, #fad0c4 0%, #a1c4fd 100%);*/
+  background: linear-gradient(135deg, #f1376e 0%, #010a4e 70%);
   overflow: hidden;
 
   .timeline-container {
@@ -81,13 +109,14 @@ body {
       font-size: 3rem;
       position: absolute;
       top: 20vh;
+      color: white;
     }
 
     .timeline-line {
       position: absolute;
       width: 100%;
       height: 2px;
-      background: black;
+      background: white;
       top: 55vh;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -105,7 +134,7 @@ body {
     a {
       font-size: 1.5rem;
       padding: 10px 15px;
-      background: white;
+      background: rgb(216, 216, 216);
       border-radius: 5px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
       display: inline-block;
@@ -126,7 +155,7 @@ body {
 
   .navigation-buttons {
     position: absolute;
-    bottom: 20px;
+    bottom: 10%;
     display: flex;
     gap: 20px;
 
@@ -148,7 +177,8 @@ body {
 }
 
 .skills-section {
-  background: linear-gradient(135deg, #67f664 0%, #fbc2eb 100%);
+  background: linear-gradient(225deg, #6a0101 0%, #635400 100%);
+  color: white;
 
   .skills {
     display: flex;
@@ -166,7 +196,8 @@ body {
 }
 
 .social-section {
-  background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+  background: linear-gradient(325deg, #014a2b 0%, #014a2b 100%);
+  color: white;
 
   .social-profiles {
     display: flex;
@@ -174,14 +205,15 @@ body {
     gap: 20px;
 
     a {
-      color: black;
       font-size: 3rem;
+      color: white;
     }
   }
 }
 
 .comments-section {
-  background: linear-gradient(135deg, #ffaeae 0%, #a6c1ee 100%);
+  background: linear-gradient(135deg, #7c4e4e 0%, #2f4161 100%);
+  color: white;
   p {
     font-size: 1.5rem;
   }
@@ -195,6 +227,10 @@ body {
       font-size: 1.2rem;
     }
   }
+}
+
+footer {
+  color: white;
 }
 
 @media screen and (max-width: 600px) {
