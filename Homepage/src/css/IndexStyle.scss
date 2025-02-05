@@ -1,27 +1,36 @@
+$max-width: 1280px;
+$accent-color: #f1376e;
+
 #bg-app {
   background-color: #010a4e;
 }
 
-body {
+:root {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
   font-size: 16px;
-  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
   header {
     color: white;
     padding-block: 1rem;
+
     nav {
       gap: 10px;
-      margin: 0 10%;
-      max-width: 1200px;
       margin: 0 auto;
+      max-width: $max-width;
     }
     #name-tag {
-      background-color: #f1376e;
+      background-color: $accent-color;
       border-radius: 20px;
       align-self: baseline;
     }
   }
   #nav-seperator {
-    max-width: 1200px;
+    max-width: $max-width;
     margin: 0 auto;
     border: 0;
     height: 1px;
@@ -31,7 +40,7 @@ body {
     font-size: 3rem;
     font-weight: 500;
     line-height: 1.4;
-    background: linear-gradient(135deg, #f1376e 0%, #010a4e 70%);
+    background: linear-gradient(135deg, $accent-color 0%, #010a4e 70%);
   }
 
   h2 {
@@ -54,25 +63,29 @@ body {
 
 .full-screen {
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-inline: 50px;
 }
 .content {
-  max-width: 1200px;
+  max-width: $max-width;
   margin: 0 auto;
 }
 .scroll-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: white;
+  background-color: $accent-color;
+  border-radius: 100%;
+  padding: 0;
+  width: 50px;
+  height: 50px;
+  align-self: auto;
+  color: black;
 }
-
 .about-section {
-  /*background: linear-gradient(135deg, #9afcff 0%, #fad0c4 100%);*/
   background-color: #010a4e;
   color: white;
 }
@@ -83,6 +96,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  width: 100%;
   position: relative;
   /* background: linear-gradient(135deg, #fad0c4 0%, #a1c4fd 100%);*/
   background: linear-gradient(135deg, #f1376e 0%, #010a4e 70%);
@@ -179,11 +193,15 @@ body {
 .skills-section {
   background: linear-gradient(225deg, #6a0101 0%, #635400 100%);
   color: white;
+  h3 {
+    text-align: center;
+  }
 
   .skills {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 20px;
     font-size: 1.5rem;
   }
@@ -212,7 +230,8 @@ body {
 }
 
 .comments-section {
-  background: linear-gradient(135deg, #7c4e4e 0%, #2f4161 100%);
+  background: linear-gradient(185deg, #37d5f1 0%, #010a4e 70%);
+
   color: white;
   p {
     font-size: 1.5rem;
@@ -220,26 +239,31 @@ body {
   #work-comments {
     p {
       margin-top: 3rem;
-      font-size: 1.5rem;
-      font-weight: 500;
+      font-size: 1rem;
+      font-weight: 400;
     }
     i {
-      font-size: 1.2rem;
+      font-size: 0.8rem;
     }
   }
 }
 
 footer {
   color: white;
+  padding: 1rem;
+  margin: 0;
+  p {
+    margin: 0;
+  }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 710px) {
   body {
     h1 {
       font-size: 1.5rem;
     }
     h2 {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
     }
     h3 {
       font-size: 1.5rem;
@@ -253,16 +277,24 @@ footer {
     gap: 0px;
     padding: 0;
     flex-direction: column;
+    justify-content: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    div:last-child {
+      display: none;
+    }
   }
 
   .skills {
-    font-size: 1rem;
+    .skill {
+      font-size: 1rem;
+    }
   }
-
-  .social-profiles a {
-    font-size: 2rem;
-  }
-
   .timeline-section {
     display: flex;
 
@@ -312,6 +344,31 @@ footer {
 
       button {
         padding: 6px 12px;
+      }
+    }
+  }
+
+  .social-section {
+    .social-profiles {
+      a {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .comments-section {
+    h2 {
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    #work-comments {
+      p {
+        font-size: 0.8rem;
+      }
+      i {
+        font-size: 0.6rem;
       }
     }
   }

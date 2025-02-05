@@ -3,7 +3,7 @@
     <div id="bg-app">
       <header id="top">
         <nav class="q-my-md flex justify-between">
-          <div class="flex-grow-1 justify-start">
+          <div class="justify-start">
             <q-btn flat label="Om" @click="scrollToSection('about')" />
             <q-btn flat label="Studie" @click="scrollToSection('timeline')" />
             <q-btn flat label="Kunnskap" @click="scrollToSection('skills')" />
@@ -22,7 +22,7 @@
             <h1 class="q-mx-none text-left">Hei, jeg er Emil Berglund. <br> En Informatikk student.</h1>
             <article>
               <p>
-                Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HIØ i Halden.
+                Jeg går studiet, "informatikk - design og utvikling av IT-systemer" ved HiØ i Halden.
                 Mitt studieløp startet høsten 2023 og jeg ferdigekamniert våren 2026.
                 Jeg har spesielisert meg innen Programmering, og driver på smått med selvlæring av Vue og Quasar på
                 fritiden.
@@ -69,67 +69,84 @@
             <h2>Kunnskap</h2>
             <p>
               Som en Informatikk-student tilegner man seg et bredt spekter av kunnskap innenfor informasjonsteknologi.
-              Jeg har derfor tilegnet meg en rekke ferdigheter og kunnskaper.
               Under vil du kunne se en oversikt.
             </p>
-            <section class="skills">
-              <div class="skill">
-                <i class="fab fa-html5"></i>
-                <p>HTML</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-css3-alt"></i>
-                <p>CSS</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-js"></i>
-                <p>JavaScript</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-sass"></i>
-                <p>SASS</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-python"></i>
-                <p>Python</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-java"></i>
-                <p>Java</p>
-              </div>
-              <div class="skill">
-                <i class="fas fa-database"></i>
-                <p>MYSQL</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-figma"></i>
-                <p>Figma</p>
-              </div>
-              <div class="skill">
-                <i class="fas fa-terminal"></i>
-                <p>C/Shell</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-vuejs"></i>
-                <p>Vue</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-react"></i>
-                <p>React</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-node-js"></i>
-                <p>Node.js</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-quasar"></i>
-                <p>Quasar</p>
-              </div>
-              <div class="skill">
-                <i class="fab fa-git-alt"></i>
-                <p>Git</p>
-              </div>
+            <section class="skills-container">
+              <h3>Rammeverk:</h3>
+              <section class="skills">
+                <div class="skill">
+                  <i class="fab fa-vuejs"></i>
+                  <p>Vue</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-react"></i>
+                  <p>React</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-node-js"></i>
+                  <p>Node.js</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-quasar"></i>
+                  <p>Quasar</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-microsoft"></i>
+                  <p>.NET</p>
+                </div>
+              </section>
 
+              <h3>Front-End:</h3>
+              <section class="skills">
+                <div class="skill">
+                  <i class="fab fa-html5"></i>
+                  <p>HTML</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-css3-alt"></i>
+                  <p>CSS</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-js"></i>
+                  <p>JavaScript</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-sass"></i>
+                  <p>SASS</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-figma"></i>
+                  <p>Figma</p>
+                </div>
+              </section>
+
+              <h3>Back-End:</h3>
+              <section class="skills">
+                <div class="skill">
+                  <i class="fab fa-python"></i>
+                  <p>Python</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-java"></i>
+                  <p>Java</p>
+                </div>
+                <div class="skill">
+                  <i class="fas fa-database"></i>
+                  <p>MYSQL</p>
+                </div>
+                <div class="skill">
+                  <i class="fas fa-terminal"></i>
+                  <p>C/Shell</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-git-alt"></i>
+                  <p>Git</p>
+                </div>
+                <div class="skill">
+                  <i class="fab fa-github"></i>
+                  <p>GitHub</p>
+                </div>
+              </section>
             </section>
           </div>
         </section>
@@ -187,7 +204,7 @@
 </template>
 
 <script scoped>
-import IndexScript from 'src/assets/IndexScript.js';
+import IndexScript from 'src/scripts/IndexScript.js';
 
 export default {
   name: 'IndexPage',
@@ -205,6 +222,6 @@ export default {
 };
 </script>
 
-<style scoped lang="css">
-@import 'src/css/IndexStyle.css';
+<style scoped lang="scss">
+@import 'src/css/IndexStyle.scss';
 </style>

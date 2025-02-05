@@ -1,6 +1,6 @@
 // ----------------- External CSS/JS ------------------------
-import CourseList from 'src/assets/CourseList.js';
-import { WorkComments, randomIndex } from 'src/assets/WorkComments.js';
+import CourseList from 'src/scripts/CourseList.js';
+import { WorkComments, randomIndex } from 'src/scripts/WorkComments.js';
 import LinkedInIcon from 'src/assets/icons/linkdin_icon.png';
 import GitHubIcon from 'src/assets/icons/github_icon.png';
 import InstagramIcon from 'src/assets/icons/instagram_icon.png';

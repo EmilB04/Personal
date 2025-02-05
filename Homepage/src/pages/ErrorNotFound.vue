@@ -1,23 +1,15 @@
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
+  <div class="fullscreen error-page text-white text-center q-pa-md flex flex-center">
     <div>
-      <div style="font-size: 30vh">
+      <div class="error-code">
         404
       </div>
 
-      <div class="text-h2" style="opacity:.4">
+      <div class="error-message text-h2">
         Oops. Nothing here...
       </div>
 
-      <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
-      />
+      <q-btn class="q-mt-xl" color="white" text-color="black" unelevated to="/" label="Go Home" no-caps />
     </div>
   </div>
 </template>
@@ -27,3 +19,17 @@ defineOptions({
   name: 'ErrorNotFound'
 });
 </script>
+
+<style scoped lang="scss">
+.error-page {
+  background: linear-gradient(135deg, #f1376e 0%, #010a4e 70%);
+}
+
+.error-code {
+  font-size: 30vh;
+}
+
+.error-message {
+  opacity: 0.4;
+}
+</style>
