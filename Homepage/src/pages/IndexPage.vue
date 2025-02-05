@@ -1,4 +1,9 @@
 <template>
+  <!--TODO:
+  1. Remove margin block on mobile
+  2. Remove nav-seperator on mobile
+
+  -->
   <q-page class="columm">
     <div id="bg-app">
       <header id="top">
