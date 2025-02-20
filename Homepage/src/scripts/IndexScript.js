@@ -14,7 +14,7 @@ export default {
       CourseList,
       WorkComments,
       // ----------------- Variables -------------------
-      sections: ['about', 'timeline', 'skills', 'social', 'comments'],
+      sections: ['about', 'timeline', 'skills', 'gitHub', 'comments'],
       semesters: ['semester-1', 'semester-2', 'semester-3', 'semester-4'],
       currentSemester: 0,
       // ----------------- Methods ---------------------

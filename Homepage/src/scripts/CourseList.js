@@ -44,7 +44,7 @@ const courseList = [
       },
       {
         name: 'Innføring i datasikkerhet',
-        link: 'https://www.hiof.no/studier/emner/iio/itk/2023/var/itf15019.html',
+        link: 'https://www.hiof.no/studier/emner/iio/itk/2024/var/itf15019.html',
         code: 'ITF24022',
         description:
           'Kurset gir en innføring i datasikkerhet, sikkerhetsløsninger og skadelig programvare.',
@@ -56,20 +56,20 @@ const courseList = [
     courses: [
       {
         name: 'Innføring i operativsystemer',
-        link: 'https://www.hiof.no/studier/emner/iio/itk/2023/host/itf22519.html',
+        link: 'https://www.hiof.no/studier/emner/iio/itk/2024/host/itf22519.html',
         code: 'ITF22519',
         description:
           'Kurset gir en innføring i operativsystemer og C-programmering.',
       },
       {
         name: 'Diskret matematikk',
-        link: 'https://www.hiof.no/studier/emner/iio/itk/2023/host/itf10705.html',
+        link: 'https://www.hiof.no/studier/emner/iio/itk/2024/host/itf10705.html',
         description:
           'Kurset gir en innføring i diskret matematikk og matematiske bevis.',
       },
       {
         name: 'Software Engineering og testing',
-        link: 'https://www.hiof.no/studier/emner/iio/itk/2023/host/itf20319.html',
+        link: 'https://www.hiof.no/studier/emner/iio/itk/2024/host/itf20319.html',
         description:
           'Kurset gir en innføring i software engineering, utvikling, testing og arbeidsmetodikk.',
       },

@@ -10,11 +10,13 @@
       </div>
 
       <q-btn class="q-mt-xl" color="white" text-color="black" unelevated to="/" label="Go Home" no-caps />
+      <ShootingStars />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import ShootingStars from 'src/components/ShootingStars.vue';
 defineOptions({
   name: 'ErrorNotFound'
 });
