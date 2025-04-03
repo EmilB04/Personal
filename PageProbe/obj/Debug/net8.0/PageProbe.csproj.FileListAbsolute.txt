@@ -1,0 +1,15 @@
+/Users/emilb/Documents/GitHub/Personal/PageProbe/bin/Debug/net8.0/PageProbe.deps.json
+/Users/emilb/Documents/GitHub/Personal/PageProbe/bin/Debug/net8.0/PageProbe.dll
+/Users/emilb/Documents/GitHub/Personal/PageProbe/bin/Debug/net8.0/PageProbe.pdb
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.GeneratedMSBuildEditorConfig.editorconfig
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.AssemblyInfoInputs.cache
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.AssemblyInfo.cs
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.csproj.CoreCompileInputs.cache
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.sourcelink.json
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.dll
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/refint/PageProbe.dll
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.pdb
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/ref/PageProbe.dll
+/Users/emilb/Documents/GitHub/Personal/PageProbe/bin/Debug/net8.0/PageProbe
+/Users/emilb/Documents/GitHub/Personal/PageProbe/bin/Debug/net8.0/PageProbe.runtimeconfig.json
+/Users/emilb/Documents/GitHub/Personal/PageProbe/obj/Debug/net8.0/PageProbe.genruntimeconfig.cache
