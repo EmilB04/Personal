@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PageProbe
-build_property.ProjectDir = /Users/emilb/Documents/GitHub/Personal/PageProbe/
+build_property.ProjectDir = /Users/emilb/Documents/GitHub/Personal/PageProbe/backend/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

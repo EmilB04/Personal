@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PageProbe")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3d67a860a5901b29f585607bf9be8f6c7565fb14")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c91d0738b410e41d1c9dcd28cb4ba3fb3adddc3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PageProbe")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PageProbe")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
