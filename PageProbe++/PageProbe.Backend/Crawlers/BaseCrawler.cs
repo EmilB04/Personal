@@ -98,15 +98,17 @@ class BaseCrawler
     {
         string lastHtml = await FetchHtmlAsync(url);
         storage.SaveSnapshot(url, lastHtml);
-        
+
         while (true)
         {
             await Task.Delay(intervalSeconds * 1000);
             string newHtml = await FetchHtmlAsync(url);
-            
+
             if (newHtml != lastHtml)
             {
                 Console.WriteLine("Endringer oppdaget på nettsiden!");
+                Console.WriteLine("Forskjeller:");
+                ShowDiff(lastHtml, newHtml);
                 storage.SaveSnapshot(url, newHtml);
                 lastHtml = newHtml;
             }
@@ -115,5 +117,42 @@ class BaseCrawler
                 Console.WriteLine("Ingen endringer oppdaget.");
             }
         }
+    }
+
+    private void ShowDiff(string oldHtml, string newHtml)
+    {
+        var oldLines = oldHtml.Split('\n');
+        var newLines = newHtml.Split('\n');
+
+        Console.WriteLine("=== Differences Detected ===");
+
+        for (int i = 0; i < Math.Max(oldLines.Length, newLines.Length); i++)
+        {
+            string oldLine = i < oldLines.Length ? oldLines[i] : "";
+            string newLine = i < newLines.Length ? newLines[i] : "";
+
+            if (oldLine != newLine)
+            {
+                if (string.IsNullOrWhiteSpace(oldLine))
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.WriteLine($"+ {newLine}");
+                }
+                else if (string.IsNullOrWhiteSpace(newLine))
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine($"- {oldLine}");
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"- {oldLine}");
+                    Console.WriteLine($"+ {newLine}");
+                }
+            }
+        }
+
+        Console.ResetColor();
+        Console.WriteLine("============================");
     }
 }
