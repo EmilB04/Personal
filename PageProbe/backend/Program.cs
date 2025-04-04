@@ -1,20 +1,35 @@
-﻿using System;
-using System.Net.Http;
-using System.Threading.Tasks;
+﻿// Program.cs – startpunkt for CLI-basert crawling i PageProbe
+
+using System;
 using PageProbe.FileHandler;
 
-namespace PageProbe;
-
-class Program
+namespace PageProbe
 {
-    static async Task Main()
+    class Program
     {
-        string url = "https://elkjop.no";
-        Console.WriteLine($"Overvåker: {url}\n");
+        static void Main(string[] args)
+        {
+            if (args.Length == 0)
+            {
+                Console.WriteLine("Bruk: dotnet run -- <url>");
+                return;
+            }
 
-        BaseCrawler crawler = new BaseCrawler();
-        DataStorage storage = new DataStorage();
+            string url = args[0];
+            var crawler = new BaseCrawler();
+            var storage = new DataStorage();
 
-        await crawler.MonitorWebsiteAsync(url, 30, storage); // Sjekker hver 30. sekund
+            try
+            {
+                Console.WriteLine($"Starter crawling av: {url}");
+                string html = crawler.FetchHtmlAsync(url).Result;
+                storage.SaveSnapshot(url, html);
+                Console.WriteLine("Snapshot lagret!");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Feil under crawling: {ex.Message}");
+            }
+        }
     }
 }
