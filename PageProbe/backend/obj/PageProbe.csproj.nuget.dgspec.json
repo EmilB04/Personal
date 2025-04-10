@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/emilb/Documents/GitHub/Personal/PageProbe/backend/PageProbe.csproj": {}
+    "/home/emilb_linux/dev/Personal/PageProbe/backend/PageProbe.csproj": {}
   },
   "projects": {
-    "/Users/emilb/Documents/GitHub/Personal/PageProbe/backend/PageProbe.csproj": {
+    "/home/emilb_linux/dev/Personal/PageProbe/backend/PageProbe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/emilb/Documents/GitHub/Personal/PageProbe/backend/PageProbe.csproj",
+        "projectUniqueName": "/home/emilb_linux/dev/Personal/PageProbe/backend/PageProbe.csproj",
         "projectName": "PageProbe",
-        "projectPath": "/Users/emilb/Documents/GitHub/Personal/PageProbe/backend/PageProbe.csproj",
-        "packagesPath": "/Users/emilb/.nuget/packages/",
-        "outputPath": "/Users/emilb/Documents/GitHub/Personal/PageProbe/backend/obj/",
+        "projectPath": "/home/emilb_linux/dev/Personal/PageProbe/backend/PageProbe.csproj",
+        "packagesPath": "/home/emilb_linux/.nuget/packages/",
+        "outputPath": "/home/emilb_linux/dev/Personal/PageProbe/backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/emilb/.nuget/NuGet/NuGet.Config"
+          "/home/emilb_linux/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/256/sdk/8.0.407/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
